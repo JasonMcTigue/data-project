@@ -1,5 +1,5 @@
 # bus travel times
-** Jason McTigue **
+**Jason McTigue**
 
 ## Introduction
 Welcome to my cool new API
