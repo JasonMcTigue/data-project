@@ -11,12 +11,14 @@ This dataset was received in Comma Separated Values (CSV) format, and was downlo
 The CSV file contains 8 rows, the first being a header row with the names of each field.
 There are 8 values on each line, which are as follows:
 
-      
-    - **Id**: The unique id associated with the WC.
-    - **Location**: Where the WC is located.
-    - **Type**: wether it is Automated or Conventional
-    - **Wheel Chair accessable**: If it is Wheel Chair accessabl
-    - **Opening hours**: Times when the WCs are open
-    - **Charge**: If theres a charge to use the WC
-    - **Latitude**: Location of the WC
-    - **Longatude**: Location of the WC
+    
+| **Value**       | **Description** |
+| ------------- |:-------------:|
+| **Id**:     | The unique id associated with the WC.|
+| **Location**: | Where the WC is located.|
+| **Type**: | Whether it is Automated or Conventional.|
+| **Wheelchair accessible**: | If it is wheelchair accessible.|
+| **Opening hours**: | Times when the WCs are open.|
+| **Charge**: | If there’s a charge to use the WC.|
+| **Latitude**: | Location of the WC.|
+| **Longitude**: | Location of the WC.|
