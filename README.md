@@ -1,15 +1,6 @@
-# Project title
+# Galway City Public WCs
 ## Data Representation and Querying Project 2015
-### Jason McTigue/G00312233
+### Jason McTigue
 
 ## Introduction
-Welcome to my cool new API
-
-## Dataset Description 
-This dataset came from [gmit](http://gmit.ie)
-
-```c
-int myFunction(int t){
-  return c*c;
-}
-```
+This project provides the design and documentation for the dataset Galway City Public WCs which is available at [data.gov.ie](http://data.gov.ie)...
