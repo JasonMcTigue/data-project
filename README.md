@@ -65,4 +65,25 @@ An example of a response would be:
     "Opening Hours": "24hrs",}]
     ```
     
+## WCs that are free to use
+You can get a list of all WCs in a given area using the GET method at the following URL:
+*http://galwayWCs.ie/charge/[value]*
+where you replace [value] with free/charge.
+For example, the URL:
+*http://galwayWCs.ie/location/[free]*
+will return a list of WCs in Galway city that area free to use.
+The data will be returned in JSON format, with the following properties for each WC:
+
+    - Location: the location of the WC.
+    - Charge: What it costs to use the WC
+    
+An example of a response would be:
+
+    ```json
+    [{"Location": Silverstrand, 
+    "Charge": Free,},
+    {"Location": Ballyloughan,
+    "Charge" Free,}]
+    ```
+    
 
