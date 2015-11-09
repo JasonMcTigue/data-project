@@ -32,9 +32,9 @@ For example, the URL:
 will return a list of Wheelchair-accessible WCs.
 The data will be returned in JSON format, with the following properties for each WC:
 
-    - *Location*: the location of the WC.
-    - *Type*: the type of WC (Automated or Conventional).
-    - *Opening Hours*: The opening hours of the WC
+    - Location: the location of the WC.
+    - Type: the type of WC (Automated or Conventional).
+    - Opening Hours: The opening hours of the WC
     
 An example of a response would be:
 
@@ -47,15 +47,15 @@ An example of a response would be:
 ## Location of WCs
 You can get a list of all WCs in a given area using the GET method at the following URL:
 *http://galwayWCs.ie/location/[value]*
-where you replace [value] with the eyresqare.
+where you replace [value] with the area.
 For example, the URL:
 *http://galwayWCs.ie/location/[eyresqaure]*
 will return a list of WCs in Eyre Sqare.
 The data will be returned in JSON format, with the following properties for each WC:
 
-    - *Location*: the location of the WC.
-    - *Type*: the type of WC (Automated or Conventional).
-    - *Opening Hours*: The opening hours of the WC
+    - Location: the location of the WC.
+    - Type: the type of WC: Automated or Conventional.
+    - Opening Hours: The opening hours of the WC
     
 An example of a response would be:
 
