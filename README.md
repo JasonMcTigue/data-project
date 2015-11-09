@@ -35,13 +35,34 @@ The data will be returned in JSON format, with the following properties for each
     - *Location*: the location of the WC.
     - *Type*: the type of WC (Automated or Conventional).
     - *Opening Hours*: The opening hours of the WC
-    - *Charge*: The charge for using the WC.
     
 An example of a response would be:
+
     ```json
-    
-    [ {"Location": Erye Sqaure, 
-        "Type": "Automated",
-        "Opening Hours": "24hrs",
-        "Charge": "20c"}]
+    [{"Location": Erye Sqaure, 
+    "Type": "Automated",
+    "Opening Hours": "24hrs",}]
     ```
+    
+## Location of WCs
+You can get a list of all WCs in a given area using the GET method at the following URL:
+*http://galwayWCs.ie/location/[value]*
+where you replace [value] with the eyresqare.
+For example, the URL:
+*http://galwayWCs.ie/location/[eyresqaure]*
+will return a list of WCs in Eyre Sqare.
+The data will be returned in JSON format, with the following properties for each WC:
+
+    - *Location*: the location of the WC.
+    - *Type*: the type of WC (Automated or Conventional).
+    - *Opening Hours*: The opening hours of the WC
+    
+An example of a response would be:
+
+    ```json
+    [{"Location": Erye Sqaure, 
+    "Type": "Automated",
+    "Opening Hours": "24hrs",}]
+    ```
+    
+
