@@ -86,4 +86,22 @@ An example of a response would be:
     "Charge" Free,}]
     ```
     
+##Adding new data to the dataset
+
+To add new data to the dataset you need to use a post call. 
+
+So for example if I wanted to add a new location to the dataset I would do a post call on the follwing URL: *http://galwayWCs.ie/newWC*
+
+    -POST /GalwayWCs/newWC HTTP/1.1
+    -Host: galwayWCs.ie
+    -id="9"&location="Renmore"&type="automated"&wheelchair="accessible"&openinghours="24hr"&charge="free"
+
+This would then add all this new data to the table.
+
+Post requests are a more secure way of adding new data as a get request isnt very secure.
+
+POST requests are never cached
+POST requests do not remain in the browser history
+POST requests cannot be bookmarked
+POST requests have no restrictions on data length
 
