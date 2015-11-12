@@ -3,7 +3,11 @@
 ### Jason McTigue
 
 ## Introduction
-This project provides the design and documentation for the dataset Galway City Public WCs which is available at [data.gov.ie](https://data.gov.ie/dataset/galway-city-public-wcs)
+This project provides the design and documentation for the dataset Galway City Public WCs(Water closets) which is available at [data.gov.ie](https://data.gov.ie/dataset/galway-city-public-wcs)
+
+I would imagine that this API would be very useful to everyone and espically those who would require wheelchair accessible WCS. I designed this API with wheelchair accessible needs in mind as I know not every public WC would have access for wheelchairs. It would be espically useful for tourists and people who are visiting Galway for the day and wouldn't be that familiar with the city.
+
+This API is extremely simple to use and gives the user information such as the location, the type, the charge to use and whether it is wheelchair accessible or not.
 
 ## About the data
 This dataset was received in Comma Separated Values (CSV) format, and was downloaded from [Galway City Public WCs](https://data.gov.ie/dataset/galway-city-public-wcs/resource/0e15c0e0-0c00-4650-aebc-c9304ae33ea0).
@@ -11,7 +15,6 @@ This dataset was received in Comma Separated Values (CSV) format, and was downlo
 The CSV file contains 8 rows, the first being a header row with the names of each field.
 There are 8 values on each line, which are as follows:
 
-    
 | **Value**       | **Description** |
 | ------------- |:-------------:|
 | **Id**:     | The unique id associated with the WC.|
@@ -50,7 +53,7 @@ The data will be returned in JSON format, with the following properties for each
 An example of a response would be:
 
     ```json
-    [{"Location": Erye Sqaure, 
+    [{"Location": Eyre Sqaure, 
     "Type": "Automated",
     "Opening Hours": "24hrs",}]
     ```
