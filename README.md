@@ -23,6 +23,17 @@ There are 8 values on each line, which are as follows:
 | **Latitude**: | Location of the WC.|
 | **Longitude**: | Location of the WC.|
 
+## The different HTTP methods
+
+| **Value**       | **Description** |
+| ------------- |:-------------:|
+| **Get**:     | he GET method is used to retrieve information from the given server using a given URI. Requests using GET should only retrieve data and should have no other effect on the data..|
+| **Head**: | Same as GET, but transfers the status line and header section only..|
+| **Post**: | A POST request is used to send data to the server, for example, customer information, file upload, etc. using HTML forms..|
+| **Put**: | Replaces all current representations of the target resource with the uploaded content..|
+| **Delete**: | Removes all current representations of the target resource given by a URI..|
+
+REF- *http://www.tutorialspoint.com/http/http_methods.htm*
 ## List of wheelchair accessible WCs
 You can get a list of wheelchair accessible WCs using the GET method at the following URL:
 *http://galwayWCs.ie/Wheelchair-accessible/[value]*
@@ -49,8 +60,8 @@ You can get a list of all WCs in a given area using the GET method at the follow
 *http://galwayWCs.ie/location/[value]*
 where you replace [value] with the area.
 For example, the URL:
-*http://galwayWCs.ie/location/[eyresqaure]*
-will return a list of WCs in Eyre Sqare.
+*http://galwayWCs.ie/location/[eyresquare]*
+will return a list of WCs in Eyre Square.
 The data will be returned in JSON format, with the following properties for each WC:
 
     - Location: the location of the WC.
@@ -60,7 +71,7 @@ The data will be returned in JSON format, with the following properties for each
 An example of a response would be:
 
     ```json
-    [{"Location": Erye Sqaure, 
+    [{"Location": Eyre Square, 
     "Type": "Automated",
     "Opening Hours": "24hrs",}]
     ```
@@ -90,7 +101,7 @@ An example of a response would be:
 
 To add new data to the dataset you need to use a post call. 
 
-So for example if I wanted to add a new location to the dataset I would do a post call on the follwing URL: *http://galwayWCs.ie/newWC*
+So for example if I wanted to add a new location to the dataset I would do a post call on the following URL: *http://galwayWCs.ie/newWC*
 
     -POST /GalwayWCs/newWC HTTP/1.1
     -Host: galwayWCs.ie
@@ -100,8 +111,32 @@ This would then add all this new data to the table.
 
 Post requests are a more secure way of adding new data as a get request isnt very secure.
 
-POST requests are never cached
-POST requests do not remain in the browser history
-POST requests cannot be bookmarked
-POST requests have no restrictions on data length
+    POST requests are never cached
+    POST requests do not remain in the browser history
+    POST requests cannot be bookmarked
+    POST requests have no restrictions on data length
+    REF - http://www.w3schools.com/tags/ref_httpmethods.asp
 
+## Deleting Data from the dataset.
+
+To delete data from the dataset you need to use a *delete* call.
+
+You may need to use the delete method if someone adds some wrong data to the dataset by mistake or is for some reason a WC is no longer in use or has been replaced by something else.
+
+- You would delete the the WC from the dataset by using the unique id that is associated  with the WC you want to delete.
+
+- You would need to use the DELETE method at the following URL: http://galwayWCs.ie/delete/[Id]
+
+- Where you replace ID with the id of the WC you want to delete.
+
+For example, the URL: http://galwaycarparks.ie/delete/ObjectID=5
+will delete the car park with the Object ID of 5.
+
+   An example of a response would be:
+
+    ```
+     HTTP/1.1 200 OK
+     URL DELETED
+    ```
+    
+    A HTTP responce with 200 indicates that the resource was deleted successfully.
