@@ -34,7 +34,7 @@ There are 8 values on each line, which are as follows:
 | **Head**: | Same as GET, but transfers the status line and header section only. |
 | **Post**: | A POST request is used to send data to the server, for example, customer information, file upload, etc. using HTML forms. |
 | **Put**: | Replaces all current representations of the target resource with the uploaded content. |
-| **Delete**: | Removes all current representations of the target resource given by a URI. |
+| **Delete**: | Removes all current representations of the target resource given by a URL. |
 
 REF- *http://www.tutorialspoint.com/http/http_methods.htm*
 ## List of wheelchair accessible WCs
