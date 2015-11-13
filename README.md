@@ -5,7 +5,7 @@
 ## Introduction
 This project provides the design and documentation for the dataset Galway City Public WCs(Water closets) which is available at [data.gov.ie](https://data.gov.ie/dataset/galway-city-public-wcs)
 
-I would imagine that this API would be very useful to everyone and espically those who would require wheelchair accessible WCS. I designed this API with wheelchair accessible needs in mind as I know not every public WC would have access for wheelchairs. It would be espically useful for tourists and people who are visiting Galway for the day and wouldn't be that familiar with the city.
+I would imagine that this API would be very useful to everyone and especially those who would require wheelchair accessible WCs. I designed this API with wheelchair accessible needs in mind as I know not every public WC would have access for wheelchairs. It would be especially useful for tourists and people who are visiting Galway for the day and wouldn't be that familiar with the city.
 
 This API is extremely simple to use and gives the user information such as the location, the type, the charge to use and whether it is wheelchair accessible or not.
 
@@ -37,12 +37,13 @@ There are 8 values on each line, which are as follows:
 | **Delete**: | Removes all current representations of the target resource given by a URL. |
 
 REF- *http://www.tutorialspoint.com/http/http_methods.htm*
+
 ## List of wheelchair accessible WCs
-You can get a list of wheelchair accessible WCs using the GET method at the following URL:
+You can get a list of wheelchair accessible WCs using the **GET** method at the following URL:
 *http://galwayWCs.ie/Wheelchair-accessible/[value]*
 where you replace [value] with the Wheelchair.
 For example, the URL:
-*http://galwayWCs.ie/Wheelchair-accessible/[wheelchair]*
+*http://galwayWCs.ie/Wheelchair-accessible/wheelchair*
 will return a list of Wheelchair-accessible WCs.
 The data will be returned in JSON format, with the following properties for each WC:
 
@@ -59,11 +60,11 @@ An example of a response would be:
     ```
     
 ## Location of WCs
-You can get a list of all WCs in a given area using the GET method at the following URL:
+You can get a list of all WCs in a given area using the **GET** method at the following URL:
 *http://galwayWCs.ie/location/[value]*
 where you replace [value] with the area.
 For example, the URL:
-*http://galwayWCs.ie/location/[eyresquare]*
+*http://galwayWCs.ie/location/eyresquare*
 will return a list of WCs in Eyre Square.
 The data will be returned in JSON format, with the following properties for each WC:
 
@@ -80,11 +81,11 @@ An example of a response would be:
     ```
     
 ## WCs that are free to use
-You can get a list of all WCs in a given area using the GET method at the following URL:
+You can get a list of all WCs in a given area using the **GET** method at the following URL:
 *http://galwayWCs.ie/charge/[value]*
 where you replace [value] with free/charge.
 For example, the URL:
-*http://galwayWCs.ie/location/[free]*
+*http://galwayWCs.ie/location/free*
 will return a list of WCs in Galway city that area free to use.
 The data will be returned in JSON format, with the following properties for each WC:
 
@@ -102,7 +103,7 @@ An example of a response would be:
     
 ##Adding new data to the dataset
 
-To add new data to the dataset you need to use a post call. 
+To add new data to the dataset you need to use a **POST** method. 
 
 So for example if I wanted to add a new location to the dataset I would do a post call on the following URL: *http://galwayWCs.ie/newWC*
 
@@ -122,17 +123,17 @@ Post requests are a more secure way of adding new data as a get request isnt ver
 
 ## Deleting Data from the dataset.
 
-To delete data from the dataset you need to use a *delete* call.
+To delete data from the dataset you need to use a **DELETE** method.
 
-You may need to use the delete method if someone adds some wrong data to the dataset by mistake or is for some reason a WC is no longer in use or has been replaced by something else.
+You may need to use the delete method if someone adds some wrong data to the dataset by mistake or if for some reason a WC is no longer in use or has been replaced by something else.
 
 - You would delete the the WC from the dataset by using the unique id that is associated  with the WC you want to delete.
 
 - You would need to use the DELETE method at the following URL: http://galwayWCs.ie/delete/[Id]
 
-- Where you replace ID with the id of the WC you want to delete.
+- Where you replace Id with the id of the WC you want to delete.
 
-For example, the URL: http://galwaycarparks.ie/delete/ObjectID=5
+For example, the URL: http://galwaycarparks.ie/delete/Id=5
 will delete the car park with the Object ID of 5.
 
    An example of a response would be:
